@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7D117444139FF52200ED23EC /* game-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7D117441139FF52200ED23EC /* game-Info.plist */; };
+		7D11744C139FF52E00ED23EC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 7D117446139FF52E00ED23EC /* Credits.rtf */; };
+		7D11744D139FF52E00ED23EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D117448139FF52E00ED23EC /* InfoPlist.strings */; };
+		7D11744E139FF52E00ED23EC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D11744A139FF52E00ED23EC /* MainMenu.xib */; };
+		7DB6B1D113B3ABAD000D5C96 /* player.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DB6B1D013B3ABAD000D5C96 /* player.png */; };
+		7DB6B1D413B3B9B9000D5C96 /* walk1.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 7DB6B1D313B3B9B9000D5C96 /* walk1.bmp */; };
+		7DC0E12B13A1211600B4576B /* AllegroMain-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DC0E12A13A1211600B4576B /* AllegroMain-5.0.framework */; };
+		7DC0E12C13A1212600B4576B /* AllegroMain-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DC0E12A13A1211600B4576B /* AllegroMain-5.0.framework */; };
+		7DCE1D41139FA9BA000B08A9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCE1D40139FA9BA000B08A9 /* Cocoa.framework */; };
+		7DCE1D54139FA9BA000B08A9 /* gameAppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE1D53139FA9BA000B08A9 /* gameAppDelegate.cpp */; };
+		7DCE1D5E139FA9BA000B08A9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCE1D40139FA9BA000B08A9 /* Cocoa.framework */; };
+		7DCE1D69139FA9BA000B08A9 /* gameTests.h in Resources */ = {isa = PBXBuildFile; fileRef = 7DCE1D68139FA9BA000B08A9 /* gameTests.h */; };
+		7DCE1D6B139FA9BA000B08A9 /* gameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DCE1D6A139FA9BA000B08A9 /* gameTests.m */; };
+		7DCE1D7D139FAAD6000B08A9 /* Allegro-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCE1D73139FAAD6000B08A9 /* Allegro-5.0.framework */; };
+		7DCE1D7E139FAAD6000B08A9 /* AllegroAcodec-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCE1D74139FAAD6000B08A9 /* AllegroAcodec-5.0.framework */; };
+		7DCE1D7F139FAAD6000B08A9 /* AllegroAudio-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCE1D75139FAAD6000B08A9 /* AllegroAudio-5.0.framework */; };
+		7DCE1D80139FAAD6000B08A9 /* AllegroColor-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCE1D76139FAAD6000B08A9 /* AllegroColor-5.0.framework */; };
+		7DCE1D81139FAAD6000B08A9 /* AllegroDialog-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCE1D77139FAAD6000B08A9 /* AllegroDialog-5.0.framework */; };
+		7DCE1D82139FAAD6000B08A9 /* AllegroFont-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCE1D78139FAAD6000B08A9 /* AllegroFont-5.0.framework */; };
+		7DCE1D83139FAAD6000B08A9 /* AllegroImage-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCE1D79139FAAD6000B08A9 /* AllegroImage-5.0.framework */; };
+		7DCE1D84139FAAD6000B08A9 /* AllegroMemfile-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCE1D7A139FAAD6000B08A9 /* AllegroMemfile-5.0.framework */; };
+		7DCE1D85139FAAD6000B08A9 /* AllegroPrimitives-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCE1D7B139FAAD6000B08A9 /* AllegroPrimitives-5.0.framework */; };
+		7DCE1D86139FAAD6000B08A9 /* AllegroTTF-5.0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DCE1D7C139FAAD6000B08A9 /* AllegroTTF-5.0.framework */; };
+		7DCE1D87139FAADE000B08A9 /* Allegro-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DCE1D73139FAAD6000B08A9 /* Allegro-5.0.framework */; };
+		7DCE1D88139FAADE000B08A9 /* AllegroAcodec-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DCE1D74139FAAD6000B08A9 /* AllegroAcodec-5.0.framework */; };
+		7DCE1D89139FAADE000B08A9 /* AllegroAudio-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DCE1D75139FAAD6000B08A9 /* AllegroAudio-5.0.framework */; };
+		7DCE1D8A139FAADE000B08A9 /* AllegroColor-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DCE1D76139FAAD6000B08A9 /* AllegroColor-5.0.framework */; };
+		7DCE1D8B139FAADE000B08A9 /* AllegroDialog-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DCE1D77139FAAD6000B08A9 /* AllegroDialog-5.0.framework */; };
+		7DCE1D8C139FAADE000B08A9 /* AllegroFont-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DCE1D78139FAAD6000B08A9 /* AllegroFont-5.0.framework */; };
+		7DCE1D8D139FAADE000B08A9 /* AllegroImage-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DCE1D79139FAAD6000B08A9 /* AllegroImage-5.0.framework */; };
+		7DCE1D8E139FAADE000B08A9 /* AllegroMemfile-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DCE1D7A139FAAD6000B08A9 /* AllegroMemfile-5.0.framework */; };
+		7DCE1D8F139FAADE000B08A9 /* AllegroPrimitives-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DCE1D7B139FAAD6000B08A9 /* AllegroPrimitives-5.0.framework */; };
+		7DCE1D90139FAADE000B08A9 /* AllegroTTF-5.0.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7DCE1D7C139FAAD6000B08A9 /* AllegroTTF-5.0.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7DCE1D5F139FA9BA000B08A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7DCE1D31139FA9A5000B08A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7DCE1D3B139FA9BA000B08A9;
+			remoteInfo = game;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7DCE1D72139FAAC7000B08A9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7DC0E12C13A1212600B4576B /* AllegroMain-5.0.framework in CopyFiles */,
+				7DCE1D87139FAADE000B08A9 /* Allegro-5.0.framework in CopyFiles */,
+				7DCE1D88139FAADE000B08A9 /* AllegroAcodec-5.0.framework in CopyFiles */,
+				7DCE1D89139FAADE000B08A9 /* AllegroAudio-5.0.framework in CopyFiles */,
+				7DCE1D8A139FAADE000B08A9 /* AllegroColor-5.0.framework in CopyFiles */,
+				7DCE1D8B139FAADE000B08A9 /* AllegroDialog-5.0.framework in CopyFiles */,
+				7DCE1D8C139FAADE000B08A9 /* AllegroFont-5.0.framework in CopyFiles */,
+				7DCE1D8D139FAADE000B08A9 /* AllegroImage-5.0.framework in CopyFiles */,
+				7DCE1D8E139FAADE000B08A9 /* AllegroMemfile-5.0.framework in CopyFiles */,
+				7DCE1D8F139FAADE000B08A9 /* AllegroPrimitives-5.0.framework in CopyFiles */,
+				7DCE1D90139FAADE000B08A9 /* AllegroTTF-5.0.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		7D117441139FF52200ED23EC /* game-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "game-Info.plist"; sourceTree = "<group>"; };
+		7D117442139FF52200ED23EC /* game-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "game-Prefix.pch"; sourceTree = "<group>"; };
+		7D117447139FF52E00ED23EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		7D117449139FF52E00ED23EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7D11744B139FF52E00ED23EC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		7DB6B1D013B3ABAD000D5C96 /* player.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = player.png; sourceTree = "<group>"; };
+		7DB6B1D313B3B9B9000D5C96 /* walk1.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = walk1.bmp; sourceTree = SOURCE_ROOT; };
+		7DC0E12A13A1211600B4576B /* AllegroMain-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroMain-5.0.framework"; path = "/Library/Frameworks/AllegroMain-5.0.framework"; sourceTree = "<absolute>"; };
+		7DCE1D3C139FA9BA000B08A9 /* game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = game.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DCE1D40139FA9BA000B08A9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		7DCE1D43139FA9BA000B08A9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		7DCE1D44139FA9BA000B08A9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7DCE1D45139FA9BA000B08A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7DCE1D52139FA9BA000B08A9 /* gameAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gameAppDelegate.h; sourceTree = "<group>"; };
+		7DCE1D53139FA9BA000B08A9 /* gameAppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = gameAppDelegate.cpp; sourceTree = "<group>"; };
+		7DCE1D5D139FA9BA000B08A9 /* gameTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gameTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7DCE1D68139FA9BA000B08A9 /* gameTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gameTests.h; sourceTree = "<group>"; };
+		7DCE1D6A139FA9BA000B08A9 /* gameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = gameTests.m; sourceTree = "<group>"; };
+		7DCE1D73139FAAD6000B08A9 /* Allegro-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Allegro-5.0.framework"; path = "SDKs/MacOSX10.6.sdk/Library/Frameworks/Allegro-5.0.framework"; sourceTree = DEVELOPER_DIR; };
+		7DCE1D74139FAAD6000B08A9 /* AllegroAcodec-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroAcodec-5.0.framework"; path = "SDKs/MacOSX10.6.sdk/Library/Frameworks/AllegroAcodec-5.0.framework"; sourceTree = DEVELOPER_DIR; };
+		7DCE1D75139FAAD6000B08A9 /* AllegroAudio-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroAudio-5.0.framework"; path = "SDKs/MacOSX10.6.sdk/Library/Frameworks/AllegroAudio-5.0.framework"; sourceTree = DEVELOPER_DIR; };
+		7DCE1D76139FAAD6000B08A9 /* AllegroColor-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroColor-5.0.framework"; path = "SDKs/MacOSX10.6.sdk/Library/Frameworks/AllegroColor-5.0.framework"; sourceTree = DEVELOPER_DIR; };
+		7DCE1D77139FAAD6000B08A9 /* AllegroDialog-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroDialog-5.0.framework"; path = "SDKs/MacOSX10.6.sdk/Library/Frameworks/AllegroDialog-5.0.framework"; sourceTree = DEVELOPER_DIR; };
+		7DCE1D78139FAAD6000B08A9 /* AllegroFont-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroFont-5.0.framework"; path = "SDKs/MacOSX10.6.sdk/Library/Frameworks/AllegroFont-5.0.framework"; sourceTree = DEVELOPER_DIR; };
+		7DCE1D79139FAAD6000B08A9 /* AllegroImage-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroImage-5.0.framework"; path = "SDKs/MacOSX10.6.sdk/Library/Frameworks/AllegroImage-5.0.framework"; sourceTree = DEVELOPER_DIR; };
+		7DCE1D7A139FAAD6000B08A9 /* AllegroMemfile-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroMemfile-5.0.framework"; path = "SDKs/MacOSX10.6.sdk/Library/Frameworks/AllegroMemfile-5.0.framework"; sourceTree = DEVELOPER_DIR; };
+		7DCE1D7B139FAAD6000B08A9 /* AllegroPrimitives-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroPrimitives-5.0.framework"; path = "SDKs/MacOSX10.6.sdk/Library/Frameworks/AllegroPrimitives-5.0.framework"; sourceTree = DEVELOPER_DIR; };
+		7DCE1D7C139FAAD6000B08A9 /* AllegroTTF-5.0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "AllegroTTF-5.0.framework"; path = "SDKs/MacOSX10.6.sdk/Library/Frameworks/AllegroTTF-5.0.framework"; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7DCE1D39139FA9BA000B08A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DC0E12B13A1211600B4576B /* AllegroMain-5.0.framework in Frameworks */,
+				7DCE1D7D139FAAD6000B08A9 /* Allegro-5.0.framework in Frameworks */,
+				7DCE1D7E139FAAD6000B08A9 /* AllegroAcodec-5.0.framework in Frameworks */,
+				7DCE1D7F139FAAD6000B08A9 /* AllegroAudio-5.0.framework in Frameworks */,
+				7DCE1D80139FAAD6000B08A9 /* AllegroColor-5.0.framework in Frameworks */,
+				7DCE1D81139FAAD6000B08A9 /* AllegroDialog-5.0.framework in Frameworks */,
+				7DCE1D82139FAAD6000B08A9 /* AllegroFont-5.0.framework in Frameworks */,
+				7DCE1D83139FAAD6000B08A9 /* AllegroImage-5.0.framework in Frameworks */,
+				7DCE1D84139FAAD6000B08A9 /* AllegroMemfile-5.0.framework in Frameworks */,
+				7DCE1D85139FAAD6000B08A9 /* AllegroPrimitives-5.0.framework in Frameworks */,
+				7DCE1D86139FAAD6000B08A9 /* AllegroTTF-5.0.framework in Frameworks */,
+				7DCE1D41139FA9BA000B08A9 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DCE1D59139FA9BA000B08A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DCE1D5E139FA9BA000B08A9 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D11744F139FF54700ED23EC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D117446139FF52E00ED23EC /* Credits.rtf */,
+				7D117448139FF52E00ED23EC /* InfoPlist.strings */,
+				7D117442139FF52200ED23EC /* game-Prefix.pch */,
+				7D117441139FF52200ED23EC /* game-Info.plist */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		7DCE1D2F139FA9A5000B08A9 = {
+			isa = PBXGroup;
+			children = (
+				7DCE1D46139FA9BA000B08A9 /* game */,
+				7DCE1D61139FA9BA000B08A9 /* gameTests */,
+				7DCE1D3F139FA9BA000B08A9 /* Frameworks */,
+				7DCE1D3D139FA9BA000B08A9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7DCE1D3D139FA9BA000B08A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DCE1D3C139FA9BA000B08A9 /* game.app */,
+				7DCE1D5D139FA9BA000B08A9 /* gameTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DCE1D3F139FA9BA000B08A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DC0E12A13A1211600B4576B /* AllegroMain-5.0.framework */,
+				7DCE1D73139FAAD6000B08A9 /* Allegro-5.0.framework */,
+				7DCE1D74139FAAD6000B08A9 /* AllegroAcodec-5.0.framework */,
+				7DCE1D75139FAAD6000B08A9 /* AllegroAudio-5.0.framework */,
+				7DCE1D76139FAAD6000B08A9 /* AllegroColor-5.0.framework */,
+				7DCE1D77139FAAD6000B08A9 /* AllegroDialog-5.0.framework */,
+				7DCE1D78139FAAD6000B08A9 /* AllegroFont-5.0.framework */,
+				7DCE1D79139FAAD6000B08A9 /* AllegroImage-5.0.framework */,
+				7DCE1D7A139FAAD6000B08A9 /* AllegroMemfile-5.0.framework */,
+				7DCE1D7B139FAAD6000B08A9 /* AllegroPrimitives-5.0.framework */,
+				7DCE1D7C139FAAD6000B08A9 /* AllegroTTF-5.0.framework */,
+				7DCE1D40139FA9BA000B08A9 /* Cocoa.framework */,
+				7DCE1D42139FA9BA000B08A9 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7DCE1D42139FA9BA000B08A9 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7DCE1D43139FA9BA000B08A9 /* AppKit.framework */,
+				7DCE1D44139FA9BA000B08A9 /* CoreData.framework */,
+				7DCE1D45139FA9BA000B08A9 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		7DCE1D46139FA9BA000B08A9 /* game */ = {
+			isa = PBXGroup;
+			children = (
+				7DB6B1D313B3B9B9000D5C96 /* walk1.bmp */,
+				7DB6B1D013B3ABAD000D5C96 /* player.png */,
+				7DCE1D52139FA9BA000B08A9 /* gameAppDelegate.h */,
+				7DCE1D53139FA9BA000B08A9 /* gameAppDelegate.cpp */,
+				7D11744A139FF52E00ED23EC /* MainMenu.xib */,
+				7D11744F139FF54700ED23EC /* Support Files */,
+			);
+			path = game;
+			sourceTree = "<group>";
+		};
+		7DCE1D61139FA9BA000B08A9 /* gameTests */ = {
+			isa = PBXGroup;
+			children = (
+				7DCE1D68139FA9BA000B08A9 /* gameTests.h */,
+				7DCE1D6A139FA9BA000B08A9 /* gameTests.m */,
+			);
+			path = gameTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7DCE1D3B139FA9BA000B08A9 /* game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DCE1D6C139FA9BA000B08A9 /* Build configuration list for PBXNativeTarget "game" */;
+			buildPhases = (
+				7DCE1D38139FA9BA000B08A9 /* Sources */,
+				7DCE1D39139FA9BA000B08A9 /* Frameworks */,
+				7DCE1D3A139FA9BA000B08A9 /* Resources */,
+				7DCE1D72139FAAC7000B08A9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = game;
+			productName = game;
+			productReference = 7DCE1D3C139FA9BA000B08A9 /* game.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7DCE1D5C139FA9BA000B08A9 /* gameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7DCE1D6F139FA9BA000B08A9 /* Build configuration list for PBXNativeTarget "gameTests" */;
+			buildPhases = (
+				7DCE1D58139FA9BA000B08A9 /* Sources */,
+				7DCE1D59139FA9BA000B08A9 /* Frameworks */,
+				7DCE1D5A139FA9BA000B08A9 /* Resources */,
+				7DCE1D5B139FA9BA000B08A9 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7DCE1D60139FA9BA000B08A9 /* PBXTargetDependency */,
+			);
+			name = gameTests;
+			productName = gameTests;
+			productReference = 7DCE1D5D139FA9BA000B08A9 /* gameTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7DCE1D31139FA9A5000B08A9 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 7DCE1D34139FA9A5000B08A9 /* Build configuration list for PBXProject "dtx" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DCE1D2F139FA9A5000B08A9;
+			productRefGroup = 7DCE1D3D139FA9BA000B08A9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7DCE1D3B139FA9BA000B08A9 /* game */,
+				7DCE1D5C139FA9BA000B08A9 /* gameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7DCE1D3A139FA9BA000B08A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D117444139FF52200ED23EC /* game-Info.plist in Resources */,
+				7D11744C139FF52E00ED23EC /* Credits.rtf in Resources */,
+				7D11744D139FF52E00ED23EC /* InfoPlist.strings in Resources */,
+				7D11744E139FF52E00ED23EC /* MainMenu.xib in Resources */,
+				7DB6B1D113B3ABAD000D5C96 /* player.png in Resources */,
+				7DB6B1D413B3B9B9000D5C96 /* walk1.bmp in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DCE1D5A139FA9BA000B08A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DCE1D69139FA9BA000B08A9 /* gameTests.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7DCE1D5B139FA9BA000B08A9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7DCE1D38139FA9BA000B08A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DCE1D54139FA9BA000B08A9 /* gameAppDelegate.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7DCE1D58139FA9BA000B08A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7DCE1D6B139FA9BA000B08A9 /* gameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7DCE1D60139FA9BA000B08A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7DCE1D3B139FA9BA000B08A9 /* game */;
+			targetProxy = 7DCE1D5F139FA9BA000B08A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7D117446139FF52E00ED23EC /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D117447139FF52E00ED23EC /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		7D117448139FF52E00ED23EC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D117449139FF52E00ED23EC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7D11744A139FF52E00ED23EC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D11744B139FF52E00ED23EC /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7DCE1D36139FA9A5000B08A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		7DCE1D37139FA9A5000B08A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+		7DCE1D6D139FA9BA000B08A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/Library/Frameworks/Allegro-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroMain-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroAcodec-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroAudio-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroColor-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroDialog-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroFont-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroImage-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroMemfile-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroPhysfs-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroPrimitives-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroTTF-5.0.framework/Versions/Current/Headers",
+				);
+				INFOPLIST_FILE = "game/game-Info.plist";
+				LIBRARY_SEARCH_PATHS = "\"/Library/Frameworks/AllegroMain-5.0.framework/Versions/5.0.2\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7DCE1D6E139FA9BA000B08A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/Library/Frameworks/Allegro-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroMain-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroAcodec-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroAudio-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroColor-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroDialog-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroFont-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroImage-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroMemfile-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroPhysfs-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroPrimitives-5.0.framework/Versions/Current/Headers",
+					"/Library/Frameworks/AllegroTTF-5.0.framework/Versions/Current/Headers",
+				);
+				INFOPLIST_FILE = "game/game-Info.plist";
+				LIBRARY_SEARCH_PATHS = "\"/Library/Frameworks/AllegroMain-5.0.framework/Versions/5.0.2\"";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7DCE1D70139FA9BA000B08A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/game.app/Contents/MacOS/game";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "gameTests/gameTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "gameTests/gameTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7DCE1D71139FA9BA000B08A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/game.app/Contents/MacOS/game";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "gameTests/gameTests-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "gameTests/gameTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SenTestingKit,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7DCE1D34139FA9A5000B08A9 /* Build configuration list for PBXProject "dtx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DCE1D36139FA9A5000B08A9 /* Debug */,
+				7DCE1D37139FA9A5000B08A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DCE1D6C139FA9BA000B08A9 /* Build configuration list for PBXNativeTarget "game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DCE1D6D139FA9BA000B08A9 /* Debug */,
+				7DCE1D6E139FA9BA000B08A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7DCE1D6F139FA9BA000B08A9 /* Build configuration list for PBXNativeTarget "gameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7DCE1D70139FA9BA000B08A9 /* Debug */,
+				7DCE1D71139FA9BA000B08A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7DCE1D31139FA9A5000B08A9 /* Project object */;
+}
