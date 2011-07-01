@@ -1,0 +1,11 @@
+A basic game in ALlegro-5.0. You can open the files with XCode but to make this work you need to have the Allgero-5.0 library installed and XCode header paths set up respectively and other minor changes, you can check up about setting up XCode on their forums.
+If you are using any other IDE then you need to check the specific setting for that IDE as well, if any.
+
+What features added to the game?
+
+1. I have provided a sprite sheet for convinience.
+2. Added code to cut the sprite into diffrent BITMAP arrays and store them.
+3. Made the animate class with basic walking functions.
+4  Added code to get input and do the corresponding action.
+
+
