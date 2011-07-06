@@ -9,46 +9,38 @@ enum MYKEYS {
 int tilesize =32;
 
 tile::tile(){
-    tiles = al_load_bitmap("blocks1.png");
-    al_convert_mask_to_alpha(tiles, al_map_rgb(0, 0, 0));
+    tiles = al_load_bitmap("fd.png");
+    al_convert_mask_to_alpha(tiles, al_map_rgb(255, 0, 255));
     map_h = al_get_bitmap_height(tiles);
-    map_w = (al_get_bitmap_width(tiles))-26;
+    map_w = al_get_bitmap_width(tiles);
     offset_w=0; 
     offset_h=0;
     int i1=0;
-    for (int i=0; i<22; i++) {
+    for (int i=0; i<16; i++) {
         offset_w = 0;
-        if(i%2 == 0){
-            offset_h +=2;
-            continue;
-        }
-        else{
-            offset_h+=32;
-        }
-        for (int j=0; j<36; j++) {
-            if(j%2 == 0){
-                offset_w +=2;
-                continue;
-            }
-            else{
-                offset_w+=32;
-                printf("%d,%d\n", offset_w,offset_h);
-                tiles_array[i1]=al_create_sub_bitmap(tiles, offset_w, offset_h, 32, 32);
+        for (int j=0; j<16; j++) {
+                printf("%d,%d   %d\n", offset_w,offset_h, i1);
+                tiles_array[i1]=al_create_sub_bitmap(tiles, offset_w, offset_h, 64, 64);
                 i1++;
-            }
+            offset_w+=64;
+
         }
+        offset_h+=64;
     }
 }
 
-void tile::draw_map(){
+void tile::draw_map(int x, int y){
     int i,j;
+    int x1=0;
     //base level blitting
-    for (i=0; i<15; i++) {
+    for (i=0; i<2; i++) {
         for (j=0; j<20; j++) {
             //draw the tile using the tile set in .h file
             printf("\nbobo lasha %d %d %d\n\n", map1[i][j], al_get_bitmap_height(tiles_array[map1[i][j]]), al_get_bitmap_width(tiles_array[map1[i][j]]));
-            al_draw_bitmap(tiles_array[map1[i][j]], i*tilesize, j*tilesize, 0);
+            al_draw_bitmap(tiles_array[map1[i][j]], x1, y+32, 0);
+            x1+=64;
         }
+    y+=64;
     }
 }
 
@@ -134,9 +126,9 @@ void player::draw(int animation, float * x, float* y){
 }
 
 
-const float FPS = 10;
-const int SCREEN_W = 640;
-const int SCREEN_H = 480;
+const float FPS = 60;
+const int SCREEN_W = 1024;
+const int SCREEN_H = 768;
 
 int main(int argc, char **argv)
 {
@@ -158,9 +150,6 @@ int main(int argc, char **argv)
         return -1;
     }
     
-    player man;
-    tile titi;
-    
     if(!al_install_keyboard()) {
         fprintf(stderr, "failed to initialize the keyboard!\n");
         return -1;
@@ -178,6 +167,10 @@ int main(int argc, char **argv)
         al_destroy_timer(timer);
         return -1;
     }
+    
+    player man;
+    tile titi;
+
     
     //al_convert_mask_to_alpha(bouncer, al_map_rgb(255, 0, 255));
     //al_set_target_bitmap(bouncer);
@@ -210,7 +203,6 @@ int main(int argc, char **argv)
     
     while (!doexit) {
         printf("here!!!");
-        titi.draw_map();
     while(!doexit)
     {
         ALLEGRO_EVENT ev;
@@ -288,6 +280,7 @@ int main(int argc, char **argv)
             redraw = false;
             al_clear_to_color(al_map_rgb(0,0,0));
             //al_draw_bitmap(bouncer, bouncer_x, bouncer_y, 0);
+            titi.draw_map(center_w, center_h);
             man.draw(animation_code, &center_w, &center_h);
             al_flip_display();
             animation_code = 0;
