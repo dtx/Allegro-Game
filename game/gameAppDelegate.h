@@ -40,7 +40,7 @@ public:
 class tile{
     private:
     ALLEGRO_BITMAP *tiles;
-    ALLEGRO_BITMAP *tiles_array[11][18];
+    ALLEGRO_BITMAP *tiles_array[198];
     int map_h;
     int map_w;
     int offset_w;

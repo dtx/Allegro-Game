@@ -10,21 +10,20 @@ int tilesize =32;
 
 tile::tile(){
     tiles = al_load_bitmap("blocks1.png");
-    al_convert_mask_to_alpha(tiles, al_map_rgb(255, 255, 255));
+    al_convert_mask_to_alpha(tiles, al_map_rgb(0, 0, 0));
     map_h = al_get_bitmap_height(tiles);
     map_w = (al_get_bitmap_width(tiles))-26;
     offset_w=0; 
     offset_h=0;
-    int i1;
-    int j1;
+    int i1=0;
     for (int i=0; i<22; i++) {
+        offset_w = 0;
         if(i%2 == 0){
             offset_h +=2;
             continue;
         }
         else{
             offset_h+=32;
-            i1 = (int)i/2;
         }
         for (int j=0; j<36; j++) {
             if(j%2 == 0){
@@ -33,23 +32,26 @@ tile::tile(){
             }
             else{
                 offset_w+=32;
-                j1 = (int)j/2;
-                tiles_array[i1][j1]=al_create_sub_bitmap(tiles, offset_w, offset_h, 32, 32);
+                printf("%d,%d\n", offset_w,offset_h);
+                tiles_array[i1]=al_create_sub_bitmap(tiles, offset_w, offset_h, 32, 32);
+                i1++;
             }
         }
     }
 }
 
 void tile::draw_map(){
-    register int i,j;
+    int i,j;
     //base level blitting
-    for (i=0; i<11; i++) {
-        for (j=0; j<18; j++) {
+    for (i=0; i<15; i++) {
+        for (j=0; j<20; j++) {
             //draw the tile using the tile set in .h file
-            al_draw_bitmap(tiles_array[i][j], i, j, 0);
+            printf("\nbobo lasha %d %d %d\n\n", map1[i][j], al_get_bitmap_height(tiles_array[map1[i][j]]), al_get_bitmap_width(tiles_array[map1[i][j]]));
+            al_draw_bitmap(tiles_array[map1[i][j]], i*tilesize, j*tilesize, 0);
         }
     }
 }
+
 player::player(){
     bmp = al_load_bitmap("player.png");
     animationwidth = al_get_bitmap_width(bmp)/5;
@@ -207,6 +209,7 @@ int main(int argc, char **argv)
     al_start_timer(timer);
     
     while (!doexit) {
+        printf("here!!!");
         titi.draw_map();
     while(!doexit)
     {
@@ -283,16 +286,14 @@ int main(int argc, char **argv)
         
         if(redraw && al_is_event_queue_empty(event_queue)) {
             redraw = false;
-            
             al_clear_to_color(al_map_rgb(0,0,0));
             //al_draw_bitmap(bouncer, bouncer_x, bouncer_y, 0);
             man.draw(animation_code, &center_w, &center_h);
-            
             al_flip_display();
             animation_code = 0;
         }
     }
-    }
+}
     
     //al_destroy_bitmap(bouncer);
     al_destroy_timer(timer);
